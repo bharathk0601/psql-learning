@@ -1,0 +1,6 @@
+psql -h localhost -p 5432 -U user -W -d database
+psql -h localhost -p 5432 -U user -W -d database <|-f filename.sql
+pg_dump --schema-only|--data-only postgresql://user:password@host:port/db  > /tmp/schema.sql
+
+psql postgresql://user:password@host:port/db -c "select * from table";
+psql -h localhost -p 5432 -U user -W -d database -c "select * from table";
